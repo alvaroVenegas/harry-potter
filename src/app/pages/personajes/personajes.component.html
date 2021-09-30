@@ -1,1 +1,11 @@
-<p>personajes works!</p>
+<h1>Personajes</h1>
+
+<div *ngFor="let personaje of personajesList">
+    <h2>{{personaje.personaje}}</h2>
+    <p>{{personaje.apodo}}</p>
+    <p>{{personaje.interpretado_por}}</p>
+    <img src="{{personaje.imagen}}">
+    <div *ngIf="personaje.estudianteDeHogwarts">
+        <p>{{personaje.casaDeHogwarts}}</p>
+    </div>
+</div>

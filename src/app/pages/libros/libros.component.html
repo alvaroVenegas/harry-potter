@@ -1,1 +1,10 @@
-<p>libros works!</p>
+<h1>Libros</h1>
+
+<div *ngFor="let libro of librosList">
+    <h2>{{libro.libro}}</h2>
+    <p>{{libro.titulo_original}}</p>
+    <p>{{libro.fecha_de_lanzamiento}}</p>
+    <p>{{libro.autora}}</p>
+    <p>{{libro.descripcion}}</p>
+    
+</div>

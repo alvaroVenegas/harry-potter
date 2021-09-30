@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Hechizo } from 'src/app/models/Hechizo';
+import { HechizosService } from 'src/app/services/hechizos/hechizos.service';
 
 @Component({
   selector: 'app-hechizos',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HechizosComponent implements OnInit {
 
-  constructor() { }
+  public hechizosList: Hechizo[] = []
+
+  constructor(private hechizosService: HechizosService) { }
 
   ngOnInit(): void {
+    this.hechizosService.getHechizos().subscribe(hechizosApi => this.hechizosList = hechizosApi)
   }
 
 }

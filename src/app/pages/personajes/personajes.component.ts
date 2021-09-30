@@ -16,10 +16,10 @@ export class PersonajesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.personajesService.getPersonajes().subscribe(
-      personajesApi => this.personajesList = personajesApi
-    )
-    console.log(this.personajesList);
+    this.personajesService.getPersonajes().subscribe((personajesApi) => {
+      this.personajesList = personajesApi
+      console.log(personajesApi);
+    })
   }
 
 }

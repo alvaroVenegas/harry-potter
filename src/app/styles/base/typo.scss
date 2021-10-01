@@ -1,0 +1,92 @@
+// =============================================================================
+// _typo.scss : Default classes for Project
+// MIT License
+// =============================================================================
+
+// =============================================================================
+// _typo.scss settings
+// =============================================================================
+
+/* Load google's Roboto font*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,900);
+/* Load google's Gemunu Libre font */
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;700&display=swap");
+
+/* Reboot */
+html,
+body {
+  margin: 0 !important;
+}
+
+/* Typography */
+body {
+  font-family: "Gemunu Libre", sans-serif;
+}
+/*Convertion Ration sp to rem for html */
+$conversionRatioSpToRemWeb: 1/16; //! 0.0625;
+$conversionRatioRemToPxWeb: 16;
+// Scales
+@function spToRem($sps) {
+  @return $sps * $conversionRatioSpToRemWeb;
+}
+@function remToPx($rems) {
+  @return $rems * $conversionRatioRemToPxWeb;
+}
+@function spacing($tracking, $px) {
+  @return $tracking / $px;
+}
+@mixin base-typo($size, $weight, $spacing) {
+  font-weight: $weight;
+  font-size: #{spToRem($size)}rem;
+  letter-spacing: #{spacing($spacing, remToPx($size))}px;
+}
+// Weights
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+.base-h1 {
+  @include base-typo(96, $font-weight-light, -1.5);
+}
+.base-h2 {
+  @include base-typo(60, $font-weight-light, -0.5);
+}
+.base-h3 {
+  @include base-typo(48, $font-weight-regular, 0);
+}
+.base-h4 {
+  @include base-typo(34, $font-weight-regular, 0.25);
+}
+.base-h5 {
+  @include base-typo(24, $font-weight-regular, 0);
+}
+.base-h6 {
+  @include base-typo(20, $font-weight-medium, 0.15);
+}
+
+.base-subtitle1 {
+  @include base-typo(16, $font-weight-regular, 0.15);
+}
+.base-subtitle2 {
+  @include base-typo(14, $font-weight-medium, 0.1);
+}
+.base-body1 {
+  @include base-typo(16, $font-weight-regular, 0.5);
+}
+.base-body2 {
+  @include base-typo(14, $font-weight-regular, 0.25);
+}
+.base-button {
+  @include base-typo(14, $font-weight-medium, 0.75);
+  text-transform: uppercase;
+}
+.base-caption {
+  @include base-typo(12, $font-weight-regular, 0.4);
+}
+.base-overline {
+  @include base-typo(10, $font-weight-regular, 1.5);
+  text-transform: uppercase;
+}

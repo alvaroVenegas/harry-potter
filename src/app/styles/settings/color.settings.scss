@@ -1,5 +1,15 @@
-
+/* body[data-theme = 'light']{ */
 body{
     --color-primary:#7F0909;
     --color-secundary:#FFC500;
+    --color-title: black;
+    --color-text: black;
 }
+
+/* body[data-theme = 'dark']{
+    --color-primary:#7F0909;
+    --color-secundary:#FFC500;
+    --color-title: white;
+    --color-text: black;
+} */
+

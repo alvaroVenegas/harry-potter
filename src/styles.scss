@@ -6,3 +6,14 @@
 
 @import './app/styles/responsive/responsive.scss';
 
+ul{
+    list-style: none;
+    margin: 0px;
+    padding:0px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+

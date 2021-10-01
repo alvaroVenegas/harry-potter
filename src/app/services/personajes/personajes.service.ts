@@ -14,7 +14,7 @@ export class PersonajesService {
     return this.httpClient.get('https://fedeperin-harry-potter-api.herokuapp.com/personajes');
   }
 
-  getPersonajeById(idPersonaje:number):Observable<any>{
+  getPersonajeById(idPersonaje:any):Observable<any>{
     return this.httpClient.get('https://fedeperin-harry-potter-api.herokuapp.com/personajes/' + idPersonaje);
   }
 

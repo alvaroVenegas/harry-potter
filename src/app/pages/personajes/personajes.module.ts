@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { PersonajesRoutingModule } from './personajes-routing.module';
 import { PersonajesComponent } from './personajes.component';
+import { DetallesPersonajesComponent } from './detalles-personajes/detalles-personajes.component';
 
 
 @NgModule({
   declarations: [
-    PersonajesComponent
+    PersonajesComponent,
+    DetallesPersonajesComponent
   ],
   imports: [
     CommonModule,

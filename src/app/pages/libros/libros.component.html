@@ -1,10 +1,14 @@
-<h1>Libros</h1>
+<h1 class="title">Libros</h1>
 
-<div *ngFor="let libro of librosList">
+<div *ngFor="let libro of librosList" class="card">
     <h2>{{libro.libro}}</h2>
+    <p class="card__models"><strong>Título original</strong></p>
     <p>{{libro.titulo_original}}</p>
+    <p class="card__models"><strong>Fecha de lanzamiento</strong></p>
     <p>{{libro.fecha_de_lanzamiento}}</p>
+    <p class="card__models"><strong>Autora</strong></p>
     <p>{{libro.autora}}</p>
+    <p class="card__models"><strong>Sinopsis</strong></p>
     <p>{{libro.descripcion}}</p>
     
 </div>

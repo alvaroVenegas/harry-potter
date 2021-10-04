@@ -9,6 +9,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    color:var(--color-primary);
 /*mobile*/
     flex-direction: column;
     max-width: 350px;
@@ -20,7 +21,7 @@
 
    
     border: var(--color-primary) solid 2px;
-    background-color: var(--color-secundary);
+    background-color: var(--color-secondary);
     border-radius: 10px;
 
     &__img{

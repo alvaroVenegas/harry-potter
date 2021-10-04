@@ -1,0 +1,15 @@
+.title{
+    color:var(--color-primary);
+    text-align: center;
+}
+
+.card{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding:20px;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 0px 0px var(--color-primary);
+    margin: 5%; 
+}

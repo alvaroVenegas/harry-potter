@@ -14,7 +14,17 @@ export class LibrosComponent implements OnInit {
   constructor(private librosService:LibrosService) { }
 
   ngOnInit(): void {
-    this.librosService.getLibros().subscribe(librosApi => this.librosList = librosApi)
+    this.librosService.getLibros().subscribe((librosApi) => {
+      this.librosList = librosApi
+      console.log(this.librosList);
+    })
+  }
+
+  ngOnChanges():void {
+    /* this.librosService.getLibros().subscribe((librosApi) => {
+      this.librosList = librosApi;
+      console.log(this.librosList);
+    }) */
   }
 
 }

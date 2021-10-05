@@ -1,6 +1,21 @@
+@import '../../styles/responsive/responsive.scss';
+
 .title{
     color:var(--color-primary);
     text-align: center;
+}
+
+.container{
+    justify-content: center;
+    align-items: center;
+    
+   
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+    } 
+
 }
 
 .card{
@@ -11,5 +26,7 @@
     font-size: 24px;
     margin-top: 15px;
     box-shadow: 5px 5px 0px 0px var(--color-primary);
-    margin: 5%; 
+    margin: 25px 15px;
+   
+
 }

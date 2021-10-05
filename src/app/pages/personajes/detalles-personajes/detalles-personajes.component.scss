@@ -1,3 +1,5 @@
+@import '../../../styles/responsive/responsive.scss';
+
 .card{
     background-color: var(--color-secondary);
     color: var(--color-primary);
@@ -7,6 +9,7 @@
     margin-top: 15px;
     box-shadow: 5px 5px 0px 0px var(--color-primary);
     margin: 5%;
+    text-align: center;
     &__models{
         text-align: center;
         opacity: 0.5;
@@ -14,10 +17,11 @@
     &__img{
         border-radius: 10px;
         margin-bottom: 10px;
-      
-       
     }
-    &--center{
-        text-align: center;
+    @include tablet{
+        max-width: 900px;
+        margin-right: auto;
+        margin-left: auto;
     }
+
 }
